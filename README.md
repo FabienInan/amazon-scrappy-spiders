@@ -1,4 +1,4 @@
-# Flask Server Skeleton
+# Flask Server 
 
 ## Package manager setup
 
