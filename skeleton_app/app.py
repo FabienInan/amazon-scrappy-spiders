@@ -21,7 +21,7 @@ def get_data():
         os.system('rm output.json')
         os.system('touch output.json')
         print(id)
-        subprocess.call(['scrapy', 'runspider', "amazonReviewsSpider.py", "-a", "id=" + id, "-o", "output.json"])
+        subprocess.call(['scrapy', 'runspider', "/app/skeleton_app/amazonReviewsSpider.py", "-a", "id=" + id, "-o", "output.json"])
         with open("output.json") as items_file:
                 return items_file.read()
 
