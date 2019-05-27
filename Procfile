@@ -1,1 +1,1 @@
-web: gunicorn skeleton_app:startServer
+web: gunicorn skeleton_app:app
