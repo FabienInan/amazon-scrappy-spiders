@@ -1,8 +1,7 @@
 from flask import Flask, request, jsonify
 from twisted.internet import reactor
 from scrapy.crawler import CrawlerRunner
-from scrapy.utils.log import configure_logging
-from amazonReviewsSpider import AmazonReviewsSpider
+#from amazonReviewsSpider import AmazonReviewsSpider
 import subprocess
 import os
 
@@ -10,7 +9,6 @@ import json
 
 app = Flask(__name__)
 
-spiders = ['amazonReviewsSpider']
 results = []
 @app.route('/reviews/')
 def get_data():
