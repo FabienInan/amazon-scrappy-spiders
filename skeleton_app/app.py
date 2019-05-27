@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from twisted.internet import reactor
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
-from amazonReviewsSpider import AmazonReviewsSpider
+from .amazonReviewsSpider import AmazonReviewsSpider
 
 import json
 
