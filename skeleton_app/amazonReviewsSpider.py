@@ -2,7 +2,7 @@ import scrapy
 
 class AmazonReviewsSpider(scrapy.Spider):
     
-    name = "amazonReviewsSpider"
+    name = "amazon_reviews"
 
     def __init__(self, *args, **kwargs):
         id = kwargs.pop('id', []) 
@@ -15,7 +15,7 @@ class AmazonReviewsSpider(scrapy.Spider):
 
     # Defining a Scrapy parser
     def parse(self, response):
-        print(response)
+        
         data = response.css('#cm_cr-review_list')
              
         # Collecting product star ratings
@@ -27,9 +27,8 @@ class AmazonReviewsSpider(scrapy.Spider):
              
         # Combining the results
         for review in star_rating:
-            self.results.append({
+            yield{
                 'stars': ''.join(review.xpath('.//text()').extract()),
                 'comment': ''.join(comments[count].xpath(".//text()").extract())
-                })
+                }
             count=count+1
-
