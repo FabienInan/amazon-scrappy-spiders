@@ -9,7 +9,7 @@ class AmazonReviewsSpider(scrapy.Spider):
         if id:
             url = "https://www.amazon.ca/product-reviews/" + str(id) + "/?ie=UTF8&reviewerType=all_reviews&pageNumber="
             self.start_urls=[]
-            for i in range(1,100):
+            for i in range(1,10):
                 self.start_urls.append(url + str(i))
         super(AmazonReviewsSpider, self).__init__(*args, **kwargs)
 
