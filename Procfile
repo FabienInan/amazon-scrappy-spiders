@@ -1,1 +1,1 @@
-web: gunicorn skeleton_app:app
+web: gunicorn spiders:app
