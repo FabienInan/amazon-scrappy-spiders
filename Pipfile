@@ -14,7 +14,7 @@ name = "pypi"
 flask = "*"
 gunicorn = "*"
 scrapy = "*"
-scrapy-useragents = "*"
+scrapy-proxies = "*"
 
 [requires]
 
