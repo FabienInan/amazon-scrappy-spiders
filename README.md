@@ -1,4 +1,4 @@
-# Flask Server 
+# Heroku Spiders
 
 ## Package manager setup
 
@@ -115,9 +115,3 @@ To test our heroku setup locally before pushing it we can run:
 ```txt
 heroku local web
 ```
-
-## Sources
-
-* [Flask python web framework](http://flask.pocoo.org/)
-* [Deploying python applications on heroku with Gunicorn](https://devcenter.heroku.com/articles/python-gunicorn#basic-configuration)
-* [Gunicorn python web server](http://gunicorn.org/)
