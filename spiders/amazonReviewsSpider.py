@@ -55,7 +55,7 @@ class AmazonReviewsSpider(scrapy.Spider):
         super(AmazonReviewsSpider, self).__init__(*args, **kwargs)
 
     def start_requests(self):
-        for i in range(1,100):
+        for i in range(1,20):
             request = scrapy.Request("https://www.amazon.ca/product-reviews/" + str(self.id) + "/?ie=UTF8&reviewerType=all_reviews&pageNumber=" + str(i), self.parse, headers={'User-Agent': random.choice(self.user_agent_pool)})
             #request.meta['proxy'] = random.choice(self.proxy_pool)
             yield request
